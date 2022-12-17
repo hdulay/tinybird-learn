@@ -1,3 +1,4 @@
 osquery
 python-dotenv
 jupyterlab
+tinybird-cli
