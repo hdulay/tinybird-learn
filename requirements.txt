@@ -1,0 +1,3 @@
+osquery
+python-dotenv
+jupyterlab

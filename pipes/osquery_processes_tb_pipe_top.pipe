@@ -1,0 +1,21 @@
+NODE osquery_processes_tb_pipe_top_disk_read
+SQL >
+
+    SELECT columns_name as processes, hostIdentifier as host, avg(cast(columns_disk_bytes_read as bigint))/1000000 avg_read FROM osquery_processes_tb 
+    group by columns_name, hostIdentifier
+    order by avg_read desc
+    limit 10
+
+
+
+
+NODE osquery_processes_tb_pipe_top_write
+SQL >
+
+    SELECT columns_name as process, hostIdentifier as host, avg(cast(columns_disk_bytes_written as bigint))/1000000 avg_write FROM osquery_processes_tb 
+    group by columns_name, hostIdentifier
+    order by avg_write desc
+    limit 10
+
+
+
